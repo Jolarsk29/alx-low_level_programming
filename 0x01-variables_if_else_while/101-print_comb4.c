@@ -1,26 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - print all combinations of three different digits
- * Return: Always 0 (Success)
+ * main - print possible combination of two 2-digit numbers
+ *
+ * Return: returns zero at the end
  */
-
 int main(void)
 {
-	int one;
-	int ten;
-	int hundred;
+	int i, p;
 
-	for (hundred = '0'; hundred <= '9'; hundred++) /*hundreds place*/
+	for (i = 0; i < 100; i++)
 	{
-		for (ten = (hundred + 1); ten <= '9'; ten++) /*tens=100s+1*/
+		for (p = 0; p < 100; i++)
 		{
-			for (one = (ten + 1); one <= '9'; one++) /*ones*/
+			if  (p > i)
 			{
-				putchar(hundred);
-				putchar(ten);
-				putchar(one);
-				if (hundred != '7' || ten != '8' || one != '9')
+				putchar((i / 10) + '0');
+				putchar((i % 10) + '0');
+				putchar(' ');
+				putchar((p / 10) + '0');
+				putchar((p % 10) + '0');
+				if (i ! = 98)
 				{
 					putchar(',');
 					putchar(' ');
@@ -29,6 +29,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
