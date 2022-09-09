@@ -1,20 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - print if the number is positive, zero, or negative
+ * main - Prints the alphabet at reverse
  *
- * Description: using the main function
- * this progrma prints "Programming is positive, zero, or negative
- * Return: 0
+ * Return: Always (Success)
  */
-
 int main(void)
 {
-       	char c;
+	char c;
+
 	for (c = 'z'; c >= 'a'; c--)
 	{
-		putchar(c);
+		putchar(c)
 	}
+
 	putchar('\n');
 
 	return (0);
