@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - -print all combinations of three different digits
+ * main - print all combinations of three different digits
  * Return: Always 0 (Success)
  */
 
@@ -20,7 +20,7 @@ int main(void)
 				putchar(hundred);
 				putchar(ten);
 				putchar(one);
-				if (hundred != '7' || ten != '8' || one !='9')
+				if (hundred != '7' || ten != '8' || one != '9')	
 				{
 					putchar(',');
 					putchar(' ');
