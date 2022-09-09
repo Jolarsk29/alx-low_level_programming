@@ -1,18 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - print alphabet reversed using putchar
- * Return: Always 0 (Success)
+ * main - print if the number is positive, zero, or negative
+ *
+ * Description: using the main function
+ * this progrma prints "Programming is positive, zero, or negative
+ * Return: 0
  */
 
 int main(void)
 {
-       	char alpha = 'z';
-
-	while (alpha >= 'a')
+       	char c;
+	for (c = 'z'; c >= 'a'; c--)
 	{
-		putchar(alpha);
-		alpha--;
+		putchar(c);
 	}
 	putchar('\n');
 
