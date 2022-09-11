@@ -4,7 +4,6 @@
  * main - print a num pair from 00-99 but no repeats (00 01, 00 02, 00 03,...)
  * Return: Always 0 (Success)
  */
- 
 int main(void)
 {
 	int tens;
@@ -14,7 +13,7 @@ int main(void)
 
 	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
 	{
-		for (ones = '0'; ones <= '9'; 0nes++)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
 			for (t = tens; t <= '9'; t++) /*print second of pair*/
 			{
