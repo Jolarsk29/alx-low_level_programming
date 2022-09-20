@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * puts_half - Prints half of a string
@@ -9,27 +10,19 @@
 
 void puts_half(char *str)
 {
-	int i = 0;
-	int k;
+	int x, y, i;
 
-	while (str[j]!= '\0')
-	{
-		j++;
-	}
+	x = strlen(str);
 
-	if (j % 2 == 1)
-	{
-		k = (j - 1) / 2;
-		k += 1;
-	}
+	if (x % 2 == 1)
+
+		y = x / 2 + 1;
 	else
-	{
-		k = j / 2;
-	}
+		y = x / 2;
 
-	for (; k < j; k++)
-	{
-		_putchar(str[k]);
-	}
+	for (i = y; i < x; i++)
+
+		_putchar(str[i]);
+
 	_putchar('\n');
 }
