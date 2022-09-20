@@ -23,3 +23,19 @@ void puts_half(char *str)
 	}
 	_putchar('\n');
 }
+
+/**
+ * _strlen - returns the lenght of a string
+ * @s: string
+ * Return: returns lenght;
+ */
+
+int _strlen(char *s)
+{
+	int count, inc;
+	inc = 0;
+	for (count = o; s[count] != '\0'; count++)
+		inc++;
+
+	return (inc);
+}
