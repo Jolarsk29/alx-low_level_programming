@@ -4,12 +4,13 @@
  * _strncat - concatenate two strings but add inputted number of bytes
  * @dest: String to be appended upon
  * @scr: String to be completed at the end of dest
- * @n:integer paprameter to compare index to
+ * @n:integer parameter to compare index to
  * Return: returns new concatenated string
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
+
 	int index = 0, dest_len = 0;
 
 	while (dest[index++])
@@ -19,4 +20,5 @@ char *_strncat(char *dest, char *src, int n)
 		dest[dest_len++] = src[index];
 
 	return (dest);
+
 }
