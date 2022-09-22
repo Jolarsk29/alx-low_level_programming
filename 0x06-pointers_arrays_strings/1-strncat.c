@@ -1,25 +1,50 @@
 #include "main.h"
 
 /**
- * _strncat - concatenate two strings but add inputted number of bytes
- * @dest: String to be appended upon
- * @scr: String to be completed at the end of dest
- * @n:integer parameter to compare index to
- * Return: returns new concatenated string
+ * _strncat - function concatenates two strings
+ * @src: char pointer
+ * @dest: char pointer
+ * @n: int for bytes
+ * Return: 0
  */
 
 char *_strncat(char *dest, char *src, int n)
 
 {
+	int dest_len = _strlen(dest);
 
-	int index = 0, dest_len = 0;
+	int i;
 
-	while (dest[index++])
-		dest_len++;
+	for (i = 0 ; i < n && src[i] != '\0' ; i++)
 
-	for (index = 0; src[index] && index < n; index++)
-		dest[dest_len++] = src[index];
+		dest[dest_len + i] = src[i];
+
+	dest[dest_len + i] = '\0';
 
 	return (dest);
+}
 
+/**
+ * _strlen - function returns length of a string
+ * @s: char pointer
+ * Return: length
+ */
+
+int _strlen(char *s)
+
+{
+
+	char *copy_s = s;
+
+	int length = 0;
+
+	while (*copy_s != '\0')
+
+	{
+		length++;
+
+		copy_s++;
+	}
+
+	return (length);
 }
