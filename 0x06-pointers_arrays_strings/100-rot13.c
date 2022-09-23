@@ -2,27 +2,28 @@
 
 /**
  * rot13 - encodes a string into rot13
- * @s: string to encode
+ * @str: string to encode
  *
  * Return: address of s
  */
 
-char *rot13(char *s)
+char *rot13(char *str)
 {
-	int 1, j;
-	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int index1, index2;
 
-	for (i = 0; *(s + i); i++)
+	char alphabet[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13key[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	while (str[++index1])
 	{
-		for (j = 0; j < 52; j++)
+		for (index2 = 0; index2 < 52; index2++)
 		{
-			if (a[j] == *(s + i))
+			if (str[index1] == alphabet[index2])
 			{
-				*(s + i) = b[j];
+				str[index1] = rot13key[index2];
 				break;
 			}
 		}
 	}
-	return (s);
+	return (str);
 }
