@@ -35,7 +35,7 @@ char transform_2(char x)
 
 	while (i < 52)
 	{
-		if (x == onee[i])
+		if (x == one[i])
 		{
 			replacement = two[i];
 			break;
@@ -43,4 +43,4 @@ char transform_2(char x)
 		i++;
 	}
 	return (replacement);
-}
+i}
