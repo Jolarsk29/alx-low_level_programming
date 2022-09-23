@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * add one line to this code, so that the
+ * program prints a[2] = 98, followed by new linw
+ */
+
 int main(void)
 {
 	int n;
