@@ -7,20 +7,23 @@
  * Return: address of the encoded string
  */
 
-char *leet(char *s)
+char *leet(char *x)
 {
-	int i, j;
-	
-	char a[] = "aAeEoOtTll";
-	char b[] = "4433007711";
+	int a = 0, b, l = 5;
+	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
+	char trw[5] = {'4', '3', '0', '7', '1'};
 
-	for (i = 0; *(s + i); i++)
+	while (x[a])
 	{
-		for (j = o; j <= 9; j++)
+		b = 0;
+
+		while (b < l)
 		{
-			if (a[j] == *(s + i))
-				*(s + i) = b[j];
+			if (x[a] == tr[b] || x[a] - 32 == tr[b])
+				x[a] = trw[b];
+			b++;
 		}
+		a++;
 	}
-	return (s);
+	return (x);
 }
