@@ -6,11 +6,10 @@
 *
 * Return: length of the string
 */
-
 int len(char *str)
 {
 	int len = 0;
-	
+
 	if (str != NULL)
 	{
 		while (str[len])
@@ -18,18 +17,16 @@ int len(char *str)
 	}
 	return (len);
 }
-
 /**
 * num_words - counts the number of words in str
 *@str: string to be used
 *
 *Return: number of words
 */
-
 int num_words(char *str)
 {
 	int i = 0, words = 0;
-	
+
 	while (i <= len(str))
 	{
 		if ((str[i] != ' ') && (str[i] != '\0'))
@@ -48,23 +45,20 @@ int num_words(char *str)
 	}
 	return (words);
 }
-
 /**
 *strtow - splits a stirng into words
 *@str: string to be splitted
 *
 *Return: pointer to the array of splitted words
 */
-
 char **strtow(char *str)
 {
 	char **split;
 	int i, j = 0, temp = 0, size = 0, words = num_words(str);
-	
+
 	if (words == 0)
 		return (NULL);
 	split = (char **) malloc(sizeof(char *) * (words + 1));
-	
 	if (split != NULL)
 	{
 		for (i = 0; i <= len(str) && words; i++)
@@ -74,12 +68,11 @@ char **strtow(char *str)
 			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 			{
 				split[j] = (char *) malloc(sizeof(char) * size + 1);
-				
 				if (split[j] != NULL)
 				{
 					while (temp < size)
 					{
-						split[j][temp] = str[(i - size) +temp];
+						split[j][temp] = str[(i - size) + temp];
 						temp++;
 					}
 					split[j][temp] = '\0';
