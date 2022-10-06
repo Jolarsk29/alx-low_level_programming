@@ -103,9 +103,9 @@ void init(char *str, int l)
 /**
  * main - multiply two numbers
  * @argc: number of arguments
- * @argv: argumnet vector
+ * @argv: argument vector
  *
- * Retrun: zero, or exit status of 98 if failure
+ * Return: zero, or exit status of 98 if failure
  */
 int main(int argc, char *argv[])
 {
@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
 	char *t;
 	char e[] = "Error\n"
 
-	if (argc !=3 || check_for_digits(argv))
+	if (argc != 3 || check_for_digits(argv))
 	{
 		for (ti = 0; e[ti]; ti++)
 			_putchar(e[ti]);
@@ -122,10 +122,10 @@ int main(int argc, char *argv[])
 	}
 	for (l1 = 0; argv[1][l1]; l1++)
 		;
-	for (12 = 0; argv[2][12]; 12++)
+	for (l2 = 0; argv[2][l2]; l2++)
 		;
 	ln = l1 + l2 + 1;
-	a = malloc(ln * sizzeof(char));
+	a = malloc(ln * sizeof(char));
 	if (a == NULL)
 	{
 		for (ti = 0; e[ti]; ti++)
@@ -133,9 +133,9 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	init(a, ln - l);
-	for (ti = l2 - l, i = 0; ti . = 0; ti--, i++)
+	for (ti = l2 - l, i = 0; ti >= 0; ti--, i++)
 	{
-		t = mulcargv[2][ti], argv[1], l1 - 1, a, (ln -2) - i);
+		t = mul(argv[2][ti], argv[1], l1 - 1, a, (ln - 2) - i);
 		if (t == NULL)
 		{
 			for (ti = 0; e[ti]; ti++)
