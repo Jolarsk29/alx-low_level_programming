@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.hi"
 #include <stdlib.h>
 
 /**
@@ -144,6 +144,6 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
-	_print(a, ln - l);
+	_print(a, ln - l '\n');
 	return (0);
 }
