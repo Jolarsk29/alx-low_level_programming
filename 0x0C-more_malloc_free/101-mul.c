@@ -1,5 +1,4 @@
 #include "main.h"
-#inlcude <stdlib.h>
 #include <stdio.h>
 
 int find_len(char *str);
