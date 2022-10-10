@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 
 /**
 * init_dog - inits a variable of type dog
@@ -12,7 +13,10 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 
 {
 
-	if (d != NULL)
+	if (d == NULL)
+		return;
+
+	else
 
 	{
 		(*d).name = name;			
