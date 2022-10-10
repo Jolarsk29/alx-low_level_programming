@@ -1,8 +1,7 @@
 #include "dog.h"
 
 /**
-* init_dog - inits a variable of
-*type dog
+* init_dog - inits a variable of type dog
 *@d: dog identification
 *@name: name of dog
 *@age: age of dog
@@ -13,8 +12,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 
 {
 
-	if (d != NULL
-			)	
+	if (d != NULL)
+
 	{
 		(*d).name = name;			
 
