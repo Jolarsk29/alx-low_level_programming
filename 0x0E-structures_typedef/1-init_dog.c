@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * init_dog - nitialize a variable of type dog. 
+ * init_dog - nitialize a variable of type dog.
  * @d: dog identification.
  * @name: name of dog.
  * @age: age of dog.
