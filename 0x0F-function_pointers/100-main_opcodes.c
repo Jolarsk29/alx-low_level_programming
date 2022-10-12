@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include <stdlib.h>
 
 /**
@@ -23,10 +22,8 @@ int main(int argc, char **argv)
 
 	{
 		printf("Error\n");
-
 		exit(1);
 	}
-
 	/* the argument in position one (the number the program receives) */
 	/* will be equal to bytes */
 
@@ -39,28 +36,21 @@ int main(int argc, char **argv)
 
 	{
 		printf("Error\n");
-
 		exit(2);
 	}
-
 	/* we use runner to go through the array we receive in the argv */
 
 	while (runner < bytes)
 
 	{
-
 		/* is pre define how to print an opcodes */
 
 		printf("%02hhx", *((char *)(main + runner)));
 
 		if (bytes > runner + 1)
-
 			printf(" ");
-
 		runner++;
 	}
-
 	printf("\n");
-
 	return (0);
 }
