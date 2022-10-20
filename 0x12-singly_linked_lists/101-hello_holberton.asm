@@ -1,8 +1,6 @@
-section .data
+global main
 
-
-
-	message db "Hello, Holberton",10
+	extern printf
 
 
 
@@ -10,23 +8,17 @@ section .data
 
 
 
-	global main
-
-
-
 main:
 
+	mov rdi, format
 
+	mov rax, 0
 
-	mov rax,1
+	call printf
 
+	mov rax, 0
 
+	ret
 
-	mov rdi,1
-
-
-
-	mov rsi, message
-
-
+format:
 
