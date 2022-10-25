@@ -9,7 +9,6 @@
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
-
 {
 	listint_t *headaux;
 	listint_t *newnode;
@@ -26,9 +25,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	newnode->n = n;
 	/*  given the case, if index is cero then newnode is equal to head */
 	/* and return newnode in head of the list */
-
 	if (idx == 0)
-
 	{
 		newnode->next = *head;
 		*head = newnode;
@@ -38,15 +35,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	headaux = *head;
 	/* if index is different to the position */
 	/* counter size keeps running and headaux moves to the next node */
-
 	while (headaux != NULL && size != idx - 1)
-
 	{
 		size++;
 		headaux = headaux->next;
 	}
 	/* if index and size are equal and non NULL */
-
 	if (size == idx - 1 && headaux != NULL)
 	{
 		newnode->next = headaux->next;

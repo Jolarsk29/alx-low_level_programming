@@ -11,41 +11,29 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 {
 	listint_t *newnode_end;
-
 	listint_t *firstnode;
 
 	newnode_end = malloc(sizeof(listint_t));
 
 	if (newnode_end)
-
 	{
 		/* the new node equal to NULL */
 		/* so I know is the new end of the linked list */
-
 		newnode_end->next = NULL;
-
 		/* the lenght is n anyway */
-
 		newnode_end->n = n;
 
 		if (!*head)
-
 		{
 			*head = newnode_end;
-
 			return (newnode_end);
 		}
-
 		/* use the aux variable first node */
 		/* to go through the linked list */
-
 		firstnode = *head;
-
 		while (firstnode->next)
-
 			firstnode = firstnode->next;
 		firstnode->next = newnode_end;
-
 		return (newnode_end);
 	}
 	/* freed memory if it faile and return NULL */
