@@ -21,5 +21,7 @@ void free_listint(listint_t *head)
 
 		firstnode = head;
 		head = head->next;
+	
 		free(firstnode);
 	}
+}

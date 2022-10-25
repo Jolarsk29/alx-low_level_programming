@@ -45,7 +45,6 @@ void sumofnodes(listint_t *head, int *sum)
 
 	/* de reference to n to the data */
 	/* so I can make the sum */
-
 	n = head->n;
 	/* recursively traverse the remaining nodes  */
 	sumofnodes(head->next, sum);
