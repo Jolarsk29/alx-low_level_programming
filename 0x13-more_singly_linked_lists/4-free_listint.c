@@ -9,6 +9,7 @@
 void free_listint(listint_t *head)
 
 {
+
 	listint_t *firstnode;
 
 	/* check if head is null */
@@ -17,11 +18,14 @@ void free_listint(listint_t *head)
 	while (head != NULL)
 
 	{
+
 		/*save the head in a firstnode variable */
 
 		firstnode = head;
+
 		head = head->next;
-	
+
 		free(firstnode);
+
 	}
 }
