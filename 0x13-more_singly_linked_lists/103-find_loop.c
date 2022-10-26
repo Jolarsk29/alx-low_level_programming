@@ -31,13 +31,9 @@ listint_t *checker(listint_t *head)
 
 		if (leading && leading->next)
 			leading = leading->next;
-
 		else/* C */
-
 			return (NULL);
-
 		if (lagging == leading)/* D */
-
 			return (leading);
 	}
 	return (NULL);
