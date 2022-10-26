@@ -1,54 +1,62 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
-* free_listint_safe - frees a list
-* @h: the pointer to a pointer of head
-*
-* Description: does stuff. i didnt get this right
-*	this is similar to the last problem, but now we
-*	want to free instead of print. inside the second loop
-*	pretty much the same code to iterate through, just free it all
-* Return: the size of the list
-*/
+ *unique_node_count - counts no. of unique nodes
+ *@head:pointer to a head node
+ *Return:number of unique nodes,otherwise 0
+ */
 
-size_t free_listint_safe(listint_t **h)
+size_t unique_node_count(const listint_t *head)
 
 {
-	size_t count = 0;
-	listint_t **array;
-	unsigned int i = 0;
-	unsigned int flag = 0;
+	listint_t *hare, *tortoise;
+	size_t count = 1;
 
-	array = malloc(sizeof(listint_t *) * 1024);
-
-	if (!array)
-		exit(98);
-	while (*h != NULL)
+	if (head == NULL || head->next == NULL)
 
 	{
-		for (i = 0; i < count; i++)
+		return (0);
+	}
+	hare = head->next->next;
+	tortoise = head->next;
+	while (hare)
+	{
+		if (tortoise == hare)
 		{
-			if (*h == array[i])
+			tortoise = head;
+			while (tortoise != hare)
 			{
-				flag = 1;
-				break;
+				count++;
+				tortoise = tortoise->next;
+				hare = hare->next;
 			}
-			else
-				flag = 0;
-		}
-		if (flag == 1)
-			break;
-		array[count] = *h;
-		*h = (*h)->next;
-		count++;
-	}
-	i = 0;
-	while (i < count)
+			tortoise = tortoise->next;
+			while (tortoise != hare)
+			{
+				count++;
+				tortoise = tortoise->next;
+			}
+
+/**
+ *print_listint_safe - prints a listint list
+ *@head:pointer to head
+ *Return:number of nodes in list
+ */
+
+size_t print_listint_safe(const listint_t *head)
+
+{
+	unsigned int i = 0;
+
+	if (head == NULL)
+		exit(98);
+	while (head)
 	{
-		free(array[i]);
+		printf("[%p] %d", (void *)head, head->n);
 		i++;
+		head = head->next;
 	}
-	free(array);
-	*h = NULL;
-	return (count);
+	return (i);
 }

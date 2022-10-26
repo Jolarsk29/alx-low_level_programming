@@ -1,53 +1,41 @@
 #include "lists.h"
 
 /**
-* free_listint_safe - frees a list
-* @h: the pointer to a pointer of head
-*
-* Description: does stuff. i didnt get this right
-*	this is similar to the last problem, but now we
-*	want to free instead of print. inside the second loop
-*	pretty much the same code to iterate through, just free it all
-* Return: the size of the list
-*/
+ *free_listint_safe - frees a listint safely
+ *@h:pointer to listint
+ *Return:size of list free'd
+ */
 
 size_t free_listint_safe(listint_t **h)
 
 {
-	size_t count = 0;
-	listint_t **array;
-	unsigned int i = 0;
-	unsigned int flag = 0;
+	int p_diff;
+	size_t i = 0;
+	listint_t *temp;
 
-	array = malloc(sizeof(listint_t *) * 1024);
+	if (h == NULL || *h == NULL)
 
-	if (!array)
-		exit(98);
-	while (*h != NULL)
 	{
-		for (i = 0; i < count; i++)
+		return (0);
+	}
+	while (*h)
+	{
+		p_diff = *h - (*h)->next;
+		if (p_diff > 0)
 		{
-			if (*h == array[i])
-			{
-				flag = 1;
-				break;
-			}
-			else
-				flag = 0;
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+			i++;
 		}
-		if (flag == 1)
+		else
+		{
+			free(*h);
+			*h = NULL;
+			i++;
 			break;
-		array[count] = *h;
-		*h = (*h)->next;
-		count++;
+		}
 	}
-	i = 0;
-	while (i < count)
-	{
-		free(array[i]);
-		i++;
-	}
-	free(array);
 	*h = NULL;
-	return (count);
+	return (i);
 }
