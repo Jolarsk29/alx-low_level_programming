@@ -9,6 +9,7 @@
 int sum_listint(listint_t *head)
 
 {
+
 	int sum = 0;
 
 	while (head)
@@ -17,12 +18,10 @@ int sum_listint(listint_t *head)
 		/* find the sum of nodes */
 		sumofnodes(head, &sum);
 		/* required sum */
-
 		return (sum);
 	}
 	return (0);
 }
-
 /**
  * sumofnodes - find the sum of ndoes
  * @head: a pointer to the head of the lintint_t list
@@ -35,6 +34,7 @@ int sum_listint(listint_t *head)
 void sumofnodes(listint_t *head, int *sum)
 
 {
+
 	int n;
 
 	/* if head is equal to NULL */
