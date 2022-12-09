@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 #include <stdlib.h>
-
 #include <time.h>
 
 /**
@@ -11,9 +9,7 @@
  * @len: length of username
  * Return: the biggest number
  */
-
 int f4(char *usrn, int len)
-
 {
 	int ch;
 	int vch;
@@ -32,7 +28,6 @@ int f4(char *usrn, int len)
 	rand_num = rand();
 	return (rand_num & 63);
 }
-
 /**
  * f5 - multiplies each char of username
  *
@@ -40,9 +35,7 @@ int f4(char *usrn, int len)
  * @len: length of username
  * Return: multiplied char
  */
-
 int f5(char *usrn, int len)
-
 {
 	int ch;
 	int vch;
@@ -56,7 +49,6 @@ int f5(char *usrn, int len)
 	}
 	return (((unsigned int)ch ^ 239) & 63);
 }
-
 /**
  * f6 - generates a random char
  *
@@ -64,13 +56,11 @@ int f5(char *usrn, int len)
  * Return: a random char
  */
 int f6(char *usrn)
-
 {
 	int ch;
 	int vch;
 
 	ch = vch = 0;
-
 	while (vch < *usrn)
 	{
 		ch = rand();
@@ -78,7 +68,6 @@ int f6(char *usrn)
 	}
 	return (((unsigned int)ch ^ 229) & 63);
 }
-
 /**
  * main - Entry point
  *
@@ -86,7 +75,6 @@ int f6(char *usrn)
  * @argv: arguments vector
  * Return: Always 0
  */
-
 int main(int argc, char **argv)
 {
 	char keygen[7];
@@ -94,13 +82,10 @@ int main(int argc, char **argv)
 	long alph[] = {
 
 		0x3877445248432d41, 0x42394530534e6c37, 0x4d6e706762695432,
-
 		0x74767a5835737956, 0x2b554c59634a474f, 0x71786636576a6d34,
-
 		0x723161513346655a, 0x6b756f494b646850 };
 
 	(void) argc;
-
 	for (len = 0; argv[1][len]; len++)
 		;
 	/* ----------- f1 ----------- */
